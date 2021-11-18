@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="assets/css/style.css">
+	<script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+	<title>Paint with javascript</title>
+</head>
+<body>
+		<div class="field">
+			<div class="tools" id="tools">
+				<button class="button" onClick="undo()">Undo</button>
+				<button class="button" onClick="clear_canvas()">clear</button>
+				<div onClick="change_color(this)" class="color-field" style="background: red"></div>
+				<div onClick="change_color(this)" class="color-field" style="background: green"></div>
+				<div onClick="change_color(this)" class="color-field" style="background: blue"></div>
+				<div onClick="change_color(this)" class="color-field" style="background:yellow"></div>
+				<input type="color" onChange="draw_color = this.value" class="color-picker">
+				<input type="range"  min="0" max="100" class="pen-range" onInput="draw_width = this.value" id="pen_range" value="0">
+			</div>
+			<canvas id="canvas"></canvas>
+		</div>
+		<script src="https://cdn.jsdelivr.net/gh/Strange-bs/strange-js/js/strange.js"></script>
+		<script src="assets/js/main.js"></script>
+</body>
+</html>
